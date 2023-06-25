@@ -1,12 +1,15 @@
-""" timed message database model """
 # -*- coding: utf-8 -*-
+""" timed message database model """
+
 from datetime import timedelta
-from utils import database as db
+
 from sqlalchemy import BigInteger, Column, DateTime, Integer, String, Index, asc
+
+from utils import database as db
 
 
 class TimedMessage(db.BASE):
-    """database entity model for tags"""
+    """database entity model for timed message"""
 
     __tablename__ = "TimedMessage"
     __table_args__ = (
